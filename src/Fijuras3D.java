@@ -47,24 +47,30 @@ public class Fijuras3D {
     }
 
 //FUNCIONES
-    private void volumencilindro(float radio, float altura){
+    public void volumencilindro(float radio, float altura){
         volumen= (float) (3.14*(Math.pow(radio,2))*altura);
+        System.out.println(volumen);
     }
-    private void volumenesfera(float radio){
+    public void volumenesfera(float radio){
         volumen = (float) ((4/3) * (3.14) * Math.pow(radio,3));
+        System.out.println(volumen);
     }
-    private void volumencono(float radio,float altura){
+    public void volumencono(float radio,float altura){
         volumen = (float) ((3.14 * Math.pow(radio,2)*altura)/3);
     }
-    private void volumencubo(float lado){
+    public void volumencubo(float lado){
         volumen = (float) (Math.pow(lado,3));
+        System.out.println(volumen);
     }
-    private void volumenprima(float base,float altura){
+    public void volumenprima(float base,float altura){
         area = base * base;
         volumen = (area*altura);
+        System.out.println(volumen);
+        System.out.println(volumen);
     }
-    private void volumenpiramide(float base,float altura){
+    public void volumenpiramide(float base,float altura){
         area = base * base;
         volumen = (area*altura)/3;
+        System.out.println(volumen);
     }
 }
