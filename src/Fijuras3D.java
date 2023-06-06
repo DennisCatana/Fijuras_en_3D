@@ -6,14 +6,11 @@ public class Fijuras3D {
     private float radio;
     private float volumen;
 
-    //Constructor
-    public Fijuras3D(float lado, float base, float altura, float area, float radio, float volumen) {
+    public Fijuras3D(float lado, float base, float altura, float radio) {
         this.lado = lado;
         this.base = base;
         this.altura = altura;
-        this.area = area;
         this.radio = radio;
-        this.volumen = volumen;
     }
 
     //Setters and Getters
@@ -41,15 +38,6 @@ public class Fijuras3D {
     public void setAltura(float altura) {
         this.altura = altura;
     }
-
-    public float getArea() {
-        return area;
-    }
-
-    public void setArea(float area) {
-        this.area = area;
-    }
-
     public float getRadio() {
         return radio;
     }
@@ -58,11 +46,25 @@ public class Fijuras3D {
         this.radio = radio;
     }
 
-    public float getVolumen() {
-        return volumen;
+//FUNCIONES
+    private void volumencilindro(float radio, float altura){
+        volumen= (float) (3.14*(Math.pow(radio,2))*altura);
     }
-
-    public void setVolumen(float volumen) {
-        this.volumen = volumen;
+    private void volumenesfera(float radio){
+        volumen = (float) ((4/3) * (3.14) * Math.pow(radio,3));
+    }
+    private void volumencono(float radio,float altura){
+        volumen = (float) ((3.14 * Math.pow(radio,2)*altura)/3);
+    }
+    private void volumencubo(float lado){
+        volumen = (float) (Math.pow(lado,3));
+    }
+    private void volumenprima(float base,float altura){
+        area = base * base;
+        volumen = (area*altura);
+    }
+    private void volumenpiramide(float base,float altura){
+        area = base * base;
+        volumen = (area*altura)/3;
     }
 }
